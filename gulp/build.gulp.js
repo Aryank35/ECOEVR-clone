@@ -1,0 +1,1 @@
+const gulp=require("gulp"),{paths:p,version:d}=require("./utils.js");gulp.task("build:static",()=>gulp.src(p.watch.map(p=>`${p}/**/*`),{cwd:p.dir.dev,base:`./${p.dir.dev}`}).pipe(gulp.dest(p.dir.prod))),gulp.task("build:push",()=>gulp.src("**/*",{cwd:p.dir.prod,base:`./${p.dir.prod}`}).pipe(gulp.dest(`live/${d}`)));

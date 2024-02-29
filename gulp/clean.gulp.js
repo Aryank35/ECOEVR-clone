@@ -1,0 +1,1 @@
+const gulp=require("gulp"),del=require("del"),{paths:l,baseDir:e,version:d}=require("./utils.js");gulp.task("clean",()=>del([`${e}/${l.style.dest}/**/*.*`,`${e}/${l.script.dest}/**/*.*`,`${e}/**/*.html`,])),gulp.task("clean:build",()=>del(l.dir.prod)),gulp.task("clean:live",()=>del(`live/${d}`));
